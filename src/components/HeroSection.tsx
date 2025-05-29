@@ -3,12 +3,12 @@ import React from 'react';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center">
+    <section className="relative min-h-[60vh] flex items-end justify-start">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/8b03f4d8-b54e-40ca-9fd6-3f3bfc690b41.png')`,
+          backgroundImage: `url('/lovable-uploads/5f150675-f2a3-49fd-bd22-306c807346b2.png')`,
         }}
       >
         {/* Overlay */}
@@ -16,13 +16,10 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="relative z-10 text-white px-4 pb-8 pl-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide">
           FRIENDS OF ARMADALE
         </h1>
-        <p className="mt-4 text-lg md:text-xl opacity-90">
-          Discover the heart of your neighborhood
-        </p>
       </div>
     </section>
   );
