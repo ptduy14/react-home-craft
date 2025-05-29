@@ -47,25 +47,29 @@ const ExclusiveArmadale: React.FC = () => {
     : contentItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto">
+    <section className="py-20 px-4 bg-gray-50">
+      <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold">EXCLUSIVE ARMADALE</h2>
-          <button className="text-sm font-medium hover:underline">
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light tracking-wider text-gray-900">
+            EXCLUSIVE ARMADALE
+          </h2>
+          <button className="text-sm font-medium tracking-wider hover:underline text-gray-900">
             VIEW ALL
           </button>
         </div>
 
         {/* Category Navigation */}
-        <CategoryNavigation 
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategorySelect={setSelectedCategory}
-        />
+        <div className="mb-12">
+          <CategoryNavigation 
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategorySelect={setSelectedCategory}
+          />
+        </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredContent.map((item) => (
             <ContentCard key={item.id} item={item} />
           ))}

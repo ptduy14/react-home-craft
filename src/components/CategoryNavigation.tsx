@@ -15,15 +15,15 @@ const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
   onCategorySelect
 }) => {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1">
       {categories.map((category) => (
         <button
           key={category}
           onClick={() => onCategorySelect(category)}
-          className={`px-4 py-2 text-sm font-medium border transition-colors ${
+          className={`px-6 py-3 text-sm font-medium tracking-wider transition-colors ${
             selectedCategory === category
-              ? 'bg-gray-900 text-white border-gray-900'
-              : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+              ? 'bg-gray-900 text-white'
+              : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
           }`}
         >
           {category}
